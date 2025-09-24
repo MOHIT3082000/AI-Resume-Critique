@@ -1,0 +1,34 @@
+AI Resume Critiquer - Project Information
+
+Overview:
+This project is an AI-powered Resume Critiquer web application built using Streamlit. It allows users to upload their resume (PDF or TXT format) and receive tailored feedback on improving their resume content, skills presentation, and experience descriptions. The feedback is generated using Google's Gemini generative AI model.
+
+How It Works:
+- The user uploads a resume file via the web interface.
+- Optionally, the user can enter a job role they are targeting.
+- The app extracts text from the uploaded resume.
+- It sends a prompt containing the resume text and job role to the Google Gemini API.
+- The API generates constructive feedback and suggestions.
+- The app displays the AI-generated analysis results on the page.
+
+API Key Configuration:
+- The app requires a Google API key to access the Gemini generative AI service.
+- Currently, the API key is hardcoded in the main.py file as:
+  genai.configure(api_key="AIzaSyD5jbzbM8bmscjeiCxfGQ4EWOU_AOyk1zQ")
+- For production use, it is recommended to store the API key securely in environment variables or a .env file.
+
+How to Run:
+1. Ensure Python and required packages are installed (Streamlit, PyPDF2, google-generativeai, python-dotenv).
+2. Navigate to the project2 directory.
+3. Run the app with the command:
+   streamlit run main.py
+4. Open the provided local URL in a web browser.
+5. Upload your resume and optionally enter a job role.
+6. Click "Analyze Resume" to get AI-powered feedback.
+
+Notes:
+- The app supports PDF and TXT resume files.
+- Error handling is included for empty or invalid files.
+- The current API key is for demonstration; replace it with your own key for extended use.
+
+This setup ensures the project runs smoothly and provides valuable resume critique using AI.
